@@ -33,3 +33,5 @@ $(EXEC):	$(LIB)
 
 clean:
 	rm -f $(ASM_OBJS) $(C_OBJS) $(LIB) $(EXEC)
+
+re:	clean all
