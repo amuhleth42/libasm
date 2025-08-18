@@ -1,10 +1,13 @@
 NASM = nasm
-NASMFLAGS = -f macho64
+#NASMFLAGS = -f macho64
+NASMFLAGS = -f elf64
+
 LD = ld
-LDFLAGS = -macos_version_min 12.0 -lSystem -syslibroot $(xcrun --show-sdk-path)
+LDFLAGS = 
+#LDFLAGS = -macos_version_min 12.0 -lSystem -syslibroot $(xcrun --show-sdk-path)
 
 SRCS +=	ex1.asm			\
-		ex0.asm			\
+	ex0.asm			\
 
 
 
