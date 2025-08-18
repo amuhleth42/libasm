@@ -27,7 +27,7 @@ $(LIB):	$(ASM_OBJS)
 	ar rcs $@ $^
 
 $(EXEC):	$(LIB)
-	$(CC) $(CFLAGS) $(C_SRCS) -L. -o $@
+	$(CC) $(CFLAGS) $(C_SRCS) -L. -lasm -o $@
 
 
 clean:

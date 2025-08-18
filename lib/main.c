@@ -2,14 +2,16 @@
 #include <stdio.h>
 #include <string.h>
 
+#include "libasm.h"
+
 
 int main(void)
 {
 	char*	s;
 
 	s = "Salut mec\n";
-	printf("Lib: %d\n", strlen(s));
-	printf("Cust: %d\n", ft_strlen(s));
+	printf("Lib: %ld\n", strlen(s));
+	printf("Cust: %ld\n", ft_strlen(s));
 
 	return (0);
 }
