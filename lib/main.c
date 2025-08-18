@@ -20,5 +20,9 @@ int main(void)
 	printf("Lib: %ld\n", strlen(s));
 	printf("Cust: %ld\n", ft_strlen(s));
 
+	printf("FT_STRCMP\n");
+	char*	s2 = "bonjour\n";
+	printf("Lib: %d\n", strcmp(s, s2));
+	printf("Cust: %d\n", ft_strcmp(s, s2));
 	return (0);
 }

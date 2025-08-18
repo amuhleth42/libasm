@@ -9,6 +9,7 @@ EXEC = libasm_tester
 
 ASM_SRCS = ft_strlen.s		\
 	   ft_write.s		\
+	   ft_strcmp.s		\
 
 
 C_SRCS = main.c
