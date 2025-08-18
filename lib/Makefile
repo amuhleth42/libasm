@@ -8,6 +8,7 @@ LIB = libasm.a
 EXEC = libasm_tester
 
 ASM_SRCS = ft_strlen.s		\
+	   ft_write.s		\
 
 
 C_SRCS = main.c
