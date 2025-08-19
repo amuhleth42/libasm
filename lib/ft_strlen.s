@@ -1,5 +1,7 @@
 global ft_strlen
 
+; rdi <- const char *s
+
 section .text
 	ft_strlen:
 		xor rax, rax
