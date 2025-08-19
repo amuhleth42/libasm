@@ -2,6 +2,7 @@ global ft_strdup
 extern malloc
 extern ft_strlen
 extern ft_strcpy
+extern __errno_location
 
 ; rdi <- const char *s
 
@@ -21,6 +22,9 @@ section .text
 			call ft_strcpy
 			ret
 		.error:
+
+			call __errno_location WRT ..plt
+			mov dword [rax], 12 ; code for ENOMEM
 			xor rax, rax
 			pop rdi
 			ret
