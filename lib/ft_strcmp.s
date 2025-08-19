@@ -1,5 +1,8 @@
 global ft_strcmp
 
+; rdi <- const char *s1
+; rsi <- const char *s2
+
 section .text
 	ft_strcmp:
 		

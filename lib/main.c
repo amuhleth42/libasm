@@ -24,5 +24,13 @@ int main(void)
 	char*	s2 = "bonjour\n";
 	printf("Lib: %d\n", strcmp(s, s2));
 	printf("Cust: %d\n", ft_strcmp(s, s2));
+	
+	
+	printf("FT_STRCMP\n");
+	char	dest1[25];
+	char	dest2[25];
+	printf("Lib: %s\n", strcpy(dest1, s));
+	printf("Cust: %s\n", ft_strcpy(dest2, s));
+
 	return (0);
 }
