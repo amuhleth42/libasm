@@ -1,4 +1,5 @@
 global	ft_write
+extern	__errno_location
 
 ; rdi <- int fd
 ; rsi <- const void *buf

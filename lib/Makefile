@@ -1,7 +1,7 @@
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra
+CFLAGS = -Wall -Werror -Wextra -g
 NASM = nasm
-NASM_FLAGS = -f elf64
+NASM_FLAGS = -f elf64 -g -F dwarf
 
 
 LIB = libasm.a
@@ -11,6 +11,7 @@ ASM_SRCS = ft_strlen.s		\
 	   ft_write.s		\
 	   ft_strcmp.s		\
 	   ft_strcpy.s		\
+	   ft_strdup.s		\
 
 
 C_SRCS = main.c
