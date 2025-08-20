@@ -69,7 +69,7 @@ void ft_list_push_front(t_list **begin_list, void *data)
 
 	if (*begin_list == NULL)
 	{
-		begin_list = ft_create_elem(data);
+		*begin_list = ft_create_elem(data);
 		return ;
 	}
 	tmp = *begin_list;
