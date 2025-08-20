@@ -52,6 +52,17 @@ void ft_list_push_back(t_list **begin_list, void *data)
 	return ;
 }
 
+t_list *ft_create_elem(void *data)
+{
+	t_list	*new;
+
+	new = (t_list *) ft_calloc(sizeof(t_list), 1);
+	if (!new)
+		return (NULL);
+	new->data = data;
+	return (new);
+}
+
 void ft_list_push_front(t_list **begin_list, void *data)
 {
 	t_list *tmp;
