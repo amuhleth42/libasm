@@ -24,16 +24,15 @@ ft_list_push_front:
 
 .not_empty
 ; to do
-	push rax
+	mov rdx rax
 	push rdi
 	mov rdi, rsi
 	call ft_create_elem
-	pop rdx
-	mov [rdx], rax
+	pop rcx
+	mov [rcx], rax
 	cmp rax, 0
 	je .ret
-	pop rcx
-	mov [rax], rcx
+	mov [rax], rdx
 
 .ret
 	ret
