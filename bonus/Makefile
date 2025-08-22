@@ -39,10 +39,13 @@ $(LIB):	$(ASM_OBJS)
 $(EXEC):	$(LIB)
 	$(CC) $(CFLAGS) $(C_SRCS) -L. -lasm -o $@
 
+bonus:	$(LIB)
+	$(CC) $(CFLAGS) main_bonus.c -L. -lasm -o $@
+
 clean:
 	rm -f $(ASM_OBJS) $(C_OBJS) $(LIB)
 
 fclean: clean
-	rm -f ${EXEC}
+	rm -f ${EXEC} bonus
 
 re:	fclean all

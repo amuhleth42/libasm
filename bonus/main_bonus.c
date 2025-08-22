@@ -135,5 +135,27 @@ int main(void)
 	printf("Lib: %d\n", r1);
 	printf("Cust: %d\n", r2);
 
+	printf("\n-------BONUS-------\n");
+	t_list	*lst;
+	lst = NULL;
+
+	printf("TEST 1 : 0 elem list: \n");
+	printf("ft_list_size: %d\n", ft_list_size(lst));
+	print_list(lst);
+
+	printf("\nTEST 2 : 1 elem: banana \n");
+	ft_list_push_front(&lst, "banana");
+	printf("ft_list_size: %d\n", ft_list_size(lst));
+	print_list(lst);
+
+	printf("\nTEST 3 : 3 elem \n");
+	ft_list_push_front(&lst, "apple");
+	ft_list_push_front(&lst, "cherry");
+	print_list(lst);
+	printf("ft_list_size: %d\n", ft_list_size(lst));
+	
+	printf("\nTEST 4 : sorted \n");
+	ft_list_sort(&lst, ft_strcmp);
+	print_list(lst);
 	return (0);
 }
