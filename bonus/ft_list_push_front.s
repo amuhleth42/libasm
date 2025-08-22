@@ -23,16 +23,16 @@ ft_list_push_front:
 	ret
 
 .not_empty:
-; to do
-	mov rdx, rax
+	mov r12, rax			; rcx <- first elem
 	push rdi
 	mov rdi, rsi
 	call ft_create_elem
-	pop rcx
-	mov [rcx], rax
+	pop rdx
+	mov [rdx], rax
 	cmp rax, 0
 	je .ret
-	mov [rax], rdx
+	mov [rax], r12
+	ret
 
 .ret:
 	ret

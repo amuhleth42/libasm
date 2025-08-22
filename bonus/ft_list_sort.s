@@ -4,6 +4,7 @@ global	ft_list_sort
 ; rsi <- int (*cmp)()
 
 ; rdx <- int swapped
+
 section .text
 
 ft_list_sort:
@@ -13,16 +14,26 @@ ft_list_sort:
 	cmp qword [rdi], 0
 	je .ret
 
-	mov rax, [rdi]
+	mov rax, [rdi]		; rax <- *begin_list
 	cmp qword [rax], 0
 	je .ret
 
 .big_loop:
 	xor rdx, rdx
+	mov r12, rax
 
 .small_loop:
-	cmp qword [rax], 0
+	cmp qword [r12], 0
 	je .big_loop
+
+.call_cmp:
+	mov rdi, [r12 + 8]
+	mov rdx, [r12]
+	mov rsi, [rdx + 8]
+	call 
+	
+
+end_small_loop:
 
 	
 

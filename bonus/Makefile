@@ -9,10 +9,12 @@ EXEC = libasm_tester
 
 
 ASM_SRCS =	ft_strlen.s					\
-	   		ft_write.s					\
-			ft_strcmp.s					\
-			ft_strdup.s					\
 			ft_strcpy.s					\
+			ft_strcmp.s					\
+	   		ft_write.s					\
+	   		ft_read.s					\
+			ft_strdup.s					\
+			ft_create_elem.s			\
 			ft_list_push_front.s		\
 			ft_list_size.s				\
 			ft_list_sort.s				\
@@ -41,6 +43,6 @@ clean:
 	rm -f $(ASM_OBJS) $(C_OBJS) $(LIB)
 
 fclean: clean
-	rm ${EXEC}
+	rm -f ${EXEC}
 
 re:	fclean all
