@@ -86,7 +86,27 @@ int main(void)
 
 	free(dup1);
 	free(dup2);
+	
 
+	printf("\n-----------FT_WRITE\n");
+	
+	printf("TEST 1: Hello -> fd: 1\n");
+	int	r1 = write(1, "Hello\n", 6);
+	int	r2 = ft_write(1, "Hello\n", 6);
+	printf("Lib: %d\n", r1);
+	printf("Cust: %d\n", r2);
+
+	printf("TEST 2: \"\" -> fd: 1\n");
+	r1 = write(1, "", 0);
+	r2 = ft_write(1, "", 0);
+	printf("Lib: %d\n", r1);
+	printf("Cust: %d\n", r2);
+	
+	printf("TEST 3: Hello -> fd: -1\n");
+	r1 = write(-1, "Hello\n", 6);
+	r2 = ft_write(-1, "Hello\n", 6);
+	printf("Lib: %d\n", r1);
+	printf("Cust: %d\n", r2);
 
 	printf("\n-------BONUS-------\n");
 	t_list	*lst;
