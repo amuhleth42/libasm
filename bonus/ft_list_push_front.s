@@ -23,6 +23,7 @@ ft_list_push_front:
 	ret
 
 .not_empty:
+	push r12
 	mov r12, rax			; rcx <- first elem
 	push rdi
 	mov rdi, rsi
@@ -32,6 +33,7 @@ ft_list_push_front:
 	cmp rax, 0
 	je .ret
 	mov [rax], r12
+	pop r12
 	ret
 
 .ret:

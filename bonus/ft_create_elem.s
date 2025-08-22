@@ -19,6 +19,6 @@ ft_create_elem:
 	ret
 	
 
-.error
+.error:
 	pop rdi
 	ret
