@@ -8,11 +8,14 @@ LIB = libasm.a
 EXEC = libasm_tester
 
 
-ASM_SRCS =	ft_strlen.s		\
-	   		ft_write.s		\
-			ft_strcmp.s		\
-			ft_strdup.s		\
-			ft_strcpy.s		\
+ASM_SRCS =	ft_strlen.s					\
+	   		ft_write.s					\
+			ft_strcmp.s					\
+			ft_strdup.s					\
+			ft_strcpy.s					\
+			ft_list_push_front.s		\
+			ft_list_size.s				\
+			ft_list_sort.s				\
 
 C_SRCS = main.c
 
