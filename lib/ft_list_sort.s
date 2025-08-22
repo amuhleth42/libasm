@@ -10,18 +10,18 @@ ft_list_sort:
 	cmp rdi, 0
 	je .ret
 
-	cmp [rdi], 0
+	cmp qword [rdi], 0
 	je .ret
 
 	mov rax, [rdi]
-	cmp [rax], 0
+	cmp qword [rax], 0
 	je .ret
 
 .big_loop:
 	xor rdx, rdx
 
 .small_loop:
-	cmp [rax], 0
+	cmp qword [rax], 0
 	je .big_loop
 
 	

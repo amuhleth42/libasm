@@ -54,6 +54,9 @@ $(EXEC_BONUS):	$(LIB_BONUS)
 	$(CC) $(CFLAGS) $(C_SRCS_BONUS) -L. -lasm -o $@
 
 clean:
-	rm -f $(ASM_OBJS) $(C_OBJS) $(LIB) $(EXEC)
+	rm -f $(ASM_OBJS) $(C_OBJS) ${ASM_OBJS_BONUS} ${C_OBJS_BONUS} $(LIB)
 
-re:	clean all
+fclean: clean
+	rm ${EXEC}
+
+re:	fclean all
