@@ -44,7 +44,7 @@ bonus:	$(LIB_BONUS) $(EXEC_BONUS)
 $(LIB):	$(ASM_OBJS)
 	ar rcs $@ $^
 
-$(LIB_BONUS):	$(ASM_OBJS_BONUS)
+$(LIB_BONUS):	${ASM_OBJS} $(ASM_OBJS_BONUS)
 	ar rcs $@ $^
 
 $(EXEC):	$(LIB)
