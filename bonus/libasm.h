@@ -17,8 +17,8 @@ char	*ft_strdup(const char *s);
 
 typedef struct	s_list
 {
-	void		*data;
 	struct s_list	*next;
+	void		*data;
 }		t_list;
 
 
