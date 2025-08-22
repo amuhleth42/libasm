@@ -50,10 +50,24 @@ int main(void)
 	printf("\n-----------FT_STRCPY\n");
 	char	dest1[25];
 	char	dest2[25];
+	
+	printf("TEST 1 : copy of \"bonjour\"\n");
 	printf("Lib: %s\n", strcpy(dest1, s));
 	printf("Cust: %s\n", ft_strcpy(dest2, s));
 
+	s = "ich bin ein Berliner";
+	printf("TEST 2 : copy of \"ich bin ein Berliner\"\n");
+	printf("Lib: %s\n", strcpy(dest1, s));
+	printf("Cust: %s\n", ft_strcpy(dest2, s));
+	
+	s = "";
+	printf("TEST 3 : copy of \"\"\n");
+	printf("Lib: %s\n", strcpy(dest1, s));
+	printf("Cust: %s\n", ft_strcpy(dest2, s));
+
+
 	printf("\n-----------FT_STRDUP\n");
+	s = "ich bin ein Berliner";
 	char	*dup1 = strdup(s);
 	char	*dup2 = ft_strdup(s);
 	if (!dup1)
@@ -66,6 +80,7 @@ int main(void)
 		printf("error dup2\n");
 		return(1);
 	}
+	printf("TEST : duplication of \"ich bin ein Berliner\"\n");
 	printf("Lib: %s\n", dup1);
 	printf("Cust: %s\n", dup2);
 
