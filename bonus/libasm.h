@@ -8,11 +8,12 @@ ssize_t	ft_write(int fd, const void *buf, size_t count);
 ssize_t	ft_read(int fd, void *buf, size_t count);
 char	*ft_strdup(const char *s);
 
-int	ft_atoi_base(char *str, char *base);  // c04 ex05
-void	ft_list_push_front(t_list **begin_list, void *data);  // c12
-int	ft_list_size(t_list *begin_list);
-void	ft_list_sort(t_list **begin_list, int (*cmp)());
-void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)(), void (*free_fct)(void*));
+// ft_atoi_base
+// ft_list_push_front
+// ft_list_size
+// ft_list_sort
+// ft_list_remove_if
+//
 
 typedef struct	s_list
 {
