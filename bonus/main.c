@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <fcntl.h>
 
 #include "libasm.h"
 
@@ -105,6 +106,32 @@ int main(void)
 	printf("TEST 3: Hello -> fd: -1\n");
 	r1 = write(-1, "Hello\n", 6);
 	r2 = ft_write(-1, "Hello\n", 6);
+	printf("Lib: %d\n", r1);
+	printf("Cust: %d\n", r2);
+	
+	printf("\n-----------FT_READ\n");
+	int	fd1;
+	int	fd2;
+	char buf1[50];
+	char buf2[50];
+	fd1 = open("main.c", O_RDONLY);
+	fd2 = open("main.c", O_RDONLY);
+
+	printf("TEST 1: buf 0\n");
+	r1 = read(fd1, buf1, 0);
+	r2 = ft_read(fd2, buf2, 0);
+	printf("Lib: %d, %s\n", r1, buf1);
+	printf("Cust: %d, %s\n", r2, buf2);
+	
+	printf("TEST 2: buf 20\n");
+	r1 = read(fd1, buf1, 20);
+	r2 = ft_read(fd2, buf2, 20);
+	printf("Lib: %d, %s\n", r1, buf1);
+	printf("Cust: %d, %s\n", r2, buf2);
+	
+	printf("TEST 3: fd -1\n");
+	r1 = read(-1, buf1, 20);
+	r2 = ft_read(-1, buf2, 20);
 	printf("Lib: %d\n", r1);
 	printf("Cust: %d\n", r2);
 
